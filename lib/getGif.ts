@@ -1,9 +1,12 @@
+"use client"
+
 import { GifResult } from "@/types/GifResult";
 import { GifData } from "@/types/GifData";
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 export default async function getGif({search}: {search: string}): Promise<GifResult[]> {
+
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${search}&limit=25&rating=g`;
     
     const res = await fetch(url);
