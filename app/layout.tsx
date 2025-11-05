@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Allows for MUI's styles render consistently on both server and client */}
         <AppRouterCacheProvider>
           {children}
         </AppRouterCacheProvider>
