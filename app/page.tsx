@@ -1,17 +1,12 @@
-"use client"
+import { Metadata } from 'next';
+import Home from '@/components/Home';
 
-import { Box, Container, Button } from '@mui/material';
-import Link from 'next/link';
+export const metadata: Metadata = {
+  title: "Home | GIF Finder",
+};
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <Box sx={{ width: "100vw", height: "90vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <Container maxWidth="lg" sx={{ width: "100%", height: "100%", textAlign: "center", display: "flex", flexDirection: "column", gap: "2%", justifyContent: "center", marginBottom: "10%" }}>
-        <h1 className="text-4xl">Find your GIF now.</h1>
-        <Link href="/gif-search">
-          <Button variant="contained">Explore</Button>
-        </Link>
-      </Container>
-    </Box>
+    <Home />
   );
 }
