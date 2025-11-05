@@ -10,7 +10,7 @@ export default function GifSearch() {
     const [gifs, setGifs] = useState<GifResult[]>([]);
 
     return (
-        <Box sx={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column" }}>
+        <Box sx={{ width: "100vw", height: "90vh", display: "flex", flexDirection: "column" }}>
             <Container maxWidth="lg" sx={{ mt: 2, mb: 2 }}>
                 <Search onGifsLoaded={setGifs} />
             </Container>
